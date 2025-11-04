@@ -24,6 +24,10 @@ import FeeCollection from "./pages/cashier/FeeCollection";
 import DailySession from "./pages/cashier/DailySession";
 import ReprintReceipt from "./pages/cashier/ReprintReceipt";
 
+// Shared Pages
+import Profile from "./pages/shared/profile";
+import Settings from "./pages/shared/settings";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +50,9 @@ function DashboardRouter() {
         <Route path="/fee-structure" element={<FeeStructure />} />
         <Route path="/reports" element={<FinancialReports />} />
         <Route path="/audit-logs" element={<AuditLogs />} />
+        {/* Shared Routes */}
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
@@ -59,6 +66,9 @@ function DashboardRouter() {
         <Route path="/view-students" element={<StudentManagement />} />
         <Route path="/view-reports" element={<FinancialReports />} />
         <Route path="/view-audit" element={<AuditLogs />} />
+        {/* Shared Routes */}
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
@@ -72,6 +82,9 @@ function DashboardRouter() {
         <Route path="/fee-collection" element={<FeeCollection />} />
         <Route path="/daily-session" element={<DailySession />} />
         <Route path="/reprint-receipt" element={<ReprintReceipt />} />
+        {/* Shared Routes */}
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
